@@ -54,28 +54,29 @@ class RegisterPage extends StatelessWidget {
               controller: _confirmPasswordController,
             ),
             const SizedBox(height: 25),
-            MyButton(
-              text: "Register",
-              onTap: register,
-            ),
+            MyButton(text: "Register", onTap: register),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Have an account?",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.onSurface,
-                    )),
+                Text(
+                  "Have an account?",
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
                 GestureDetector(
                   onTap: onTap,
-                  child: Text(" Login",
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontWeight: FontWeight.bold,
-                      )),
+                  child: Text(
+                    " Login",
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

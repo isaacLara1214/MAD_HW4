@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hw4/authentication/login_or_register.dart';
 import 'package:hw4/firebase_options.dart';
 import 'theme/light_mode.dart';
+import 'authentication/auth_gate.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
