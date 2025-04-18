@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hw4/authentication/auth_service.dart';
 import 'package:hw4/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  void logout() {
+    final auth = AuthService();
+    auth.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +45,7 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'),
-            onTap: () {
-              Navigator.pop(context); // Close the drawer
-              // Implement logout logic here
-            },
+            onTap: logout,
           ),
         ],
       ),
