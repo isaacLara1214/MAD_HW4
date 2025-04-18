@@ -7,6 +7,6 @@ ThemeData lightMode = ThemeData(
     surface: Colors.white,
     onPrimary: Colors.white,
     onSecondary: Colors.black,
-    onSurface: Colors.black,
+    onSurface: const Color.fromARGB(255, 111, 111, 111),
   ),
 );
