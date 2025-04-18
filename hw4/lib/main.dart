@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hw4/authentication/login_or_register.dart';
 import 'package:hw4/firebase_options.dart';
+import 'package:hw4/pages/home_page.dart';
 import 'theme/light_mode.dart';
 import 'authentication/auth_gate.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: lightMode, // Apply your custom light theme
-      home: LoginOrRegister(),
+      home: const HomePage(),
     );
   }
 }
