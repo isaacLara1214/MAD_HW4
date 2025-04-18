@@ -5,8 +5,8 @@ import 'package:hw4/components/my_textfield.dart';
 class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
-  LoginPage({super.key});
+  final void Function()? onTap;
+  LoginPage({super.key, required this.onTap});
 
   void login() {}
 
@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
               size: 50,
               color: Theme.of(context).colorScheme.primary,
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 15),
             Text(
               "Welcome to Chat App!",
               style: TextStyle(
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                 fontSize: 15,
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             MyTextfield(
               hintText: "Email",
               obscureText: false,
@@ -56,11 +56,14 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onSurface,
                     )),
-                Text(" Sign Up",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                    )),
+                GestureDetector(
+                  onTap: onTap,
+                  child: Text(" Sign Up",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.bold,
+                      )),
+                ),
               ],
             )
           ],
