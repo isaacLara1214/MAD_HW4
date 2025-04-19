@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: lightMode, // Apply your custom light theme
-      home: HomePage(),
+      home: AuthGate(),
     );
   }
 }
